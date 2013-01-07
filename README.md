@@ -2,8 +2,8 @@ This code was written to decrypt transactions coming from the MagTek iDynamo iOS
 
 Example Code:
 
-DUKPT* d = [[DUKPT alloc]initWithBDK:@"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" KSN:[mtSCRALib getKSN]];
-NSLog([d decrypt:[mtSCRALib getTrack1]]);
+  DUKPT* d = [[DUKPT alloc]initWithBDK:@"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" KSN:[mtSCRALib getKSN]];
+  NSLog([d decrypt:[mtSCRALib getTrack1]]);
 
 
 This initializes the DUKPT class using the BDK obtained from the device provider, and the transaction KSN from the device.  The decrypt method takes in the encrypted track and returns the decrypted string.  
