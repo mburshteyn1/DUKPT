@@ -265,7 +265,7 @@ NSData* ksnData;
             NSString* blockPrev = [data substringWithRange:NSMakeRange(x - 16, 16)];
             decryptedBlock = [self xorData:decryptedBlock withData:[self dataFromString:blockPrev]];
         }
-        NSString *myString = [[NSString alloc] initWithData:decryptedBlock encoding:NSUTF8StringEncoding];
+        NSString *myString = [[NSString alloc] initWithData:decryptedBlock encoding:NSASCIIStringEncoding];
         [result insertString:myString atIndex:0];
     }
     return result;
