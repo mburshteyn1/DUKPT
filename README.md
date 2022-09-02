@@ -3,7 +3,7 @@ DUKPT
 
 This code was written to decrypt transactions coming from the MagTek iDynamo iOS devices.  It should work with other credit card devices using the DUKPT algorithm to encrypt data.  In order to use the function you must have access to the Base Derivation Key (BDK) with which your iDynamo (or another device) was encoded.  
 
-###Usage:
+### Usage:
 
 <pre><code>DUKPT* d = [[DUKPT alloc]initWithBDK:@"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" KSN:[mtSCRALib getKSN]];
 NSLog([d decrypt:[mtSCRALib getTrack1]]);
